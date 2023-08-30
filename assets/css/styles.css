@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Death Star';
+    src: url('../font/Death\ Star.otf');
+}
+@font-face {
+    font-family: 'Han Solo';
+    src: url('../font/Han-Solo-Outline/hansolov3.ttf');
+}
+@font-face {
+    font-family: 'Han Solo Outline';
+    src: url('../font/Han-Solo-Outline/hansolov3out.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+.non-scroll {
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    background-image: url('../images/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: -1;
+    
+}
+
+#page-1 {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+#page-2 {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* page 1 */
+/* header */
+#page-1 .header {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-1 .header .contact-me {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+#page-1 .header .contact-me h1 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Han Solo Outline';
+}
+
+#page-1 .header .welcome {
+    position: absolute;
+    top: 25%;
+    width: 50%;
+}
+
+#page-1 .header .welcome .row .squre1, .row .squre2 {
+    width: 70%;
+    height: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #CEB7FF;
+    box-shadow: 0 0 5px #CEB7FF;
+}
+
+#page-1 .header .welcome .row .squre1 {
+    margin-right: 10px;
+}
+
+#page-1 .header .welcome .row .squre2 {
+    margin-left: 10px;
+}
+
+#page-1 .header .welcome .row h5, .row h5 {
+    color: #CEB7FF;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Death Star';
+}
+
+#page-1 .header .welcome .center-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+#page-1 .header .welcome .center-text h1 {
+    color: #CEB7FF;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Han Solo Outline';
+}
+
+
+
+/* mid */
+#page-1 .mid {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-1 .mid .welcome-message {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 30%;
+    justify-content: center;
+}
+
+#page-1 .mid .welcome-message h1 {
+    color: #CEB7FF;
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    font-family: 'Death Star';
+}
+
+#page-1 .mid .earth {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    animation: animate 200s linear infinite;
+}
+
+#page-1 .mid .moon {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 78%;
+    animation: animate 200s linear infinite;
+}
+
+#page-1 .mid .person {
+    position: absolute;
+    top: 45%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    animation: person 1s ease-in-out infinite alternate;
+}
+
+#page-1 .mid .moon-person {
+    transform: rotate(90deg);
+}
+
+#page-1 .mid .click-open {
+    position: absolute;
+    top: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+    text-decoration: none;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#page-1 .mid .click-open h5 {
+    font-family: "Han Solo Outline";
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #CEB7FF;
+    text-shadow: 0 0 2px #CEB7FF;
+    transition: 0.5s ease-in-out;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#page-1 .mid .click-open h5.moon {
+    color: #000;
+}
+
+#page-1 .mid .click-open:hover h5  {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    scale: 1.1;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #CEB7FF;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #ffffffb5;
+    }
+}
+
+@keyframes person {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#page-1 .mid-left {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+#page-1 .mid-left div {
+    margin: 40px 0px;
+}
+
+#page-1 .bottom .left-pos{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+
+#page-1 .bottom .right-pos {
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+}
+
+#page-1 .bottom .scr-btn {
+    padding: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #CEB7FF;
+    margin-left: 20px;
+}
+
+#page-1 .bottom .scr-btn .icon-scr {
+    height: 15px;
+    background-color: #CEB7FF;
+    position: absolute;
+    width: 4px;
+    margin-top: -12px;
+    margin-left: -2px;
+    border-radius: 10px;
+    animation: scroll-animate 3s ease-in-out infinite alternate-reverse;
+    transition: 0.5;
+    opacity: 1;
+}
+
+@keyframes scroll-animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    
+}
+
+#page-1 .bottom h5.enter {
+    color: #CEB7FF;
+    font-family: "Han Solo";
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#page-1 .bottom h5.scroll {
+    color: #CEB7FF;
+    font-family: "Han Solo";
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.hide {
+    display: none!important;
+}
+
+.hide-earth {
+    animation: hide 1s ease-in-out forwards!important;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.show-earth {
+    animation: show 1s ease-in-out forwards!important;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.hide-moon {
+    animation: hide 1s ease-in-out forwards!important;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.show-moon {
+    animation: show 1s ease-in-out forwards!important;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(500px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(500px);
+    }
+}
+
+#page-1 .layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #00000097;
+    z-index: 99;
+}
+
+#page-1 .description {
+    width: 60%;
+    border: 2px solid #CEB7FF;
+    box-shadow: 0px 0px 8px #CEB7FF;
+    border-radius: 10px;
+    position: absolute;
+    padding: 30px 30px;
+    background-color: #000000d6;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    z-index: 99;
+}
+
+#page-1 .description p {
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: 100;
+    text-align: center;
+    font-size: 18px;
+    line-height: 35px;
+}
+/* end page 1 */
+
+
+/* page 2 */
+#page-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    background-color: #000000f1;
+}
+
+#page-2 .header {
+    position: relative;
+    top: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+#page-2 .header .welcome .row .squre1, #page-2 .header .welcome .row .squre2 {
+    width: 30%;
+    height: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #CEB7FF;
+    box-shadow: 0 0 5px #CEB7FF;
+}
+
+#page-2 .header .welcome .center-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+#page-2 .header .welcome .center-text h1 {
+    color: #CEB7FF;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Han Solo Outline';
+}
+
+#page-2 .header .bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 5%;
+}
+
+#page-2 .header .bottom h1 {
+    color: #CEB7FF;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Han Solo Outline';
+}
+
+
+/* reponsive */
+@media screen and (max-width: 1920px){
+    #page-1 .mid .earth {
+        bottom: -120%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -118%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #page-1 .mid .earth {
+        bottom: -100%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -114%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    #page-1 .mid .earth {
+        bottom: -55%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -53%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #page-1 .mid .earth {
+        bottom: -40%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -38%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #page-1 .mid .earth {
+        bottom: -25%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -23%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #page-1 .mid .earth {
+        bottom: -20%;
+    }
+
+    #page-1 .mid .moon {
+        bottom: -18%;
+    }
+}
