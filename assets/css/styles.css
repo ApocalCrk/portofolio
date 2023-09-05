@@ -174,6 +174,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 78%;
+    opacity: 0;
     animation: animate 200s linear infinite;
 }
 
@@ -335,7 +336,7 @@ body {
 .hide-earth {
     animation: hide 1s ease-in-out forwards!important;
     transition: 0.5s ease-in-out;
-    opacity: 1;
+    opacity: 0;
 }
 
 .show-earth {
@@ -347,7 +348,7 @@ body {
 .hide-moon {
     animation: hide 1s ease-in-out forwards!important;
     transition: 0.5s ease-in-out;
-    opacity: 1;
+    opacity: 0;
 }
 
 .show-moon {
@@ -468,6 +469,167 @@ body {
     font-weight: 600;
     font-family: 'Han Solo Outline';
 }
+
+#page-2 .content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+#page-2 .content .column {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+#page-2 .content .column .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#page-2 .content .column .row .card {
+    position: relative;
+    display: flex;
+    width: 20%;
+    height: 150px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #CEB7FF;
+    box-shadow: 0px 0px 1px #CEB7FF;
+    background-color: #000000d6;
+    margin: 20px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-2 .content .column .row .card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#page-2 .content .column .row .card .card-header img {
+    width: 100%;
+    height: 100%;
+    margin: 0 10px;
+}
+
+#page-2 .content .column .row .card .card-body {
+    margin-top: 20px;
+}
+
+#page-2 .content .column .row .card .card-body h5 {
+    color: #CEB7FF;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Han Solo Outline';
+}
+
+
+#page-2 .bottom .right-pos {
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+}
+
+#page-2 .bottom .scr-btn {
+    padding: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #CEB7FF;
+    margin-left: 20px;
+}
+
+#page-2 .bottom .scr-btn .icon-scr {
+    height: 15px;
+    background-color: #CEB7FF;
+    position: absolute;
+    width: 4px;
+    margin-top: -12px;
+    margin-left: -2px;
+    border-radius: 10px;
+    animation: scroll-animate 3s ease-in-out infinite alternate-reverse;
+    transition: 0.5;
+    opacity: 1;
+}
+
+@keyframes scroll-animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    
+}
+
+#page-2 .bottom h5.scroll {
+    color: #CEB7FF;
+    font-family: "Han Solo";
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* reponsive */

@@ -21,6 +21,7 @@ function hideEarth() {
         setTimeout(function() {
             $moon.removeClass("show-moon");
         }, 1000);
+        $moon.css("opacity", 1);
     }
 }
 
@@ -50,4 +51,21 @@ function closeAll() {
         $earth.removeClass("show-earth");
     }, 1000);
 }
+
+document.addEventListener("wheel", function() {
+    var page1 = document.getElementById("page-1");
+    var page2 = document.getElementById("page-2");
+
+    if (page1.classList.contains("hide")) {
+        page1.classList.remove("hide");
+        page1.classList.add("show");
+        page2.classList.remove("show");
+        page2.classList.add("hide");
+    } else if (page2.classList.contains("hide")) {
+        page1.classList.remove("show");
+        page1.classList.add("hide");
+        page2.classList.remove("hide");
+        page2.classList.add("show");
+    }
+});
 
